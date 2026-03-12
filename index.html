@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Flappy Bird Mini App</title>
+
+<!-- Telegram Web App API -->
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Канвас игры -->
+<canvas id="game" width="400" height="600"></canvas>
+
+<!-- Звуки -->
+<audio id="flap" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"></audio>
+<audio id="scoreSound" src="https://actions.google.com/sounds/v1/cartoon/pop.ogg"></audio>
+<audio id="hit" src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"></audio>
+
+<!-- Скрипт игры -->
+<script src="game.js"></script>
+
+<!-- Telegram Mini App init -->
+<script>
+const tg = window.Telegram.WebApp;
+
+// Разворачиваем приложение на весь экран
+tg.expand();
+
+// Оповещаем Telegram, что всё готово
+tg.ready();
+</script>
+
+</body>
+</html>
