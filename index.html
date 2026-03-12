@@ -12,25 +12,18 @@
 
 <body>
 
-<!-- Канвас игры -->
-<canvas id="game" width="400" height="600"></canvas>
+<canvas id="game"></canvas>
 
 <!-- Звуки -->
 <audio id="flap" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"></audio>
 <audio id="scoreSound" src="https://actions.google.com/sounds/v1/cartoon/pop.ogg"></audio>
 <audio id="hit" src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"></audio>
 
-<!-- Скрипт игры -->
 <script src="game.js"></script>
 
-<!-- Telegram Mini App init -->
 <script>
 const tg = window.Telegram.WebApp;
-
-// Разворачиваем приложение на весь экран
 tg.expand();
-
-// Оповещаем Telegram, что всё готово
 tg.ready();
 </script>
 
